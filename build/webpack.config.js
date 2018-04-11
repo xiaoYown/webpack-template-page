@@ -45,11 +45,18 @@ module.exports = {
         }
       },
       {
-        test: /\.js$/,
+        test: /(\.ts|\.js)$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
         options: {
           formatter: require('eslint-friendly-formatter')
+        }
+      },
+      {
+        test: /\.ts$/,
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: true
         }
       },
       {
@@ -71,7 +78,7 @@ module.exports = {
       '@': path.resolve(__dirname, '../src'),
       'config'	: path.resolve(__dirname, '../config')
     },
-    extensions: ['.js', '.json']
+    extensions: ['.ts', '.js', '.json']
   }
 };
 

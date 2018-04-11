@@ -10,7 +10,7 @@ function getEntry(globPath) {
   })
   return entries
 }
-const pageEntries = getEntry("./src/views/*/*.js"); // 获取对应 html 入口文件文件
+const pageEntries = getEntry("./src/views/*/*.ts"); // 获取对应 html 入口文件文件
 const entries = {}
 
 for (let key in pageEntries) {
