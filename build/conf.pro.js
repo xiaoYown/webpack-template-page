@@ -6,7 +6,7 @@ const config = 	require('../config')
 const baseWebpack =	require('./webpack.config.js')
 const ExtractTextPlugin =	require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin =	require('html-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const pageEntries = require('../config/entries').pageEntries
 const entries = require('../config/entries').entries
@@ -60,7 +60,7 @@ var plugins =  [
 		filename: utils.assetsPath('css/[name].css?v=[chunkhash]'), //单独使用style标签加载css并设置其路径
 		allChunks: true // 异步组件样式提取, 防止 css 带入 js 文件, 可能会引起 css module production 环境中无法找到
 	}),
-	new BundleAnalyzerPlugin()
+	// new BundleAnalyzerPlugin()
 ].concat(__bundleLibs)
 
 var __pages = {}
