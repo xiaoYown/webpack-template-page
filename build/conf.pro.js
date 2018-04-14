@@ -49,12 +49,12 @@ var plugins =  [
 	new webpack.DefinePlugin({
 		'process.env': config.build.env
 	}),
-	new webpack.optimize.UglifyJsPlugin({
-		// minimize: false,
-		compress: {
-			warnings: false
-		}
-	}),
+	// new webpack.optimize.UglifyJsPlugin({
+	// 	// minimize: false,
+	// 	compress: {
+	// 		warnings: false
+	// 	}
+	// }),
 	// new webpack.optimize.OccurenceOrderPlugin(),
 	new ExtractTextPlugin({
 		filename: utils.assetsPath('css/[name].css?v=[chunkhash]'), //单独使用style标签加载css并设置其路径

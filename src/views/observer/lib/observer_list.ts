@@ -2,9 +2,7 @@ class ObserverList {
 
   observerList: Array<any> = [];
 
-  constructor (options: any) {
-  }
-  mod (method: string, index: number, observer: any, len: number = 1) {
+  mod (method: string, observer: any, index: number, len: number = 1) {
     switch (method) {
       case 'add':
         this.observerList.push(observer);
@@ -27,8 +25,8 @@ class ObserverList {
   }
 }
 
-function CreateObserverList (params: any) {
-  return new ObserverList(params);
+function CreateObserverList () {
+  return new ObserverList();
 }
 
-export default ObserverList
+export default CreateObserverList
