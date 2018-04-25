@@ -12,7 +12,7 @@ module.exports = {
 	build: {
 		env: require('./env.pro'),
 		favicon: path.resolve(__dirname, '../src/assets/images/favicon.ico'),
-		assetsRoot: path.resolve(__dirname, '../dist'),
+		assetsRoot: path.resolve(__dirname, '../example'),
 		assetsSubDirectory: 'static',
 		assetsPublicPath: '/',
 		productionSourceMap: false,

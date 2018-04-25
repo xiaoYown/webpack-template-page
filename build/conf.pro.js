@@ -79,7 +79,7 @@ Object.keys(pageEntries).forEach((page) => {
 
 Object.keys(pageEntries).forEach(function(name){
 	var plugin = new HtmlWebpackPlugin({
-		filename: path.resolve(__dirname, `../dist/${name}.html`),
+		filename: path.resolve(config.build.assetsRoot, `${name}.html`),
 		template: path.resolve(__dirname, `../src/pages/${name}.html`),
 		favicon: config.build.favicon,
 		inject: true,
